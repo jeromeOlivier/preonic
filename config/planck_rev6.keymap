@@ -5,15 +5,11 @@
 	keymap {
 		compatible = "zmk,keymap";
         behaviors {
-            pht: positional_hold_tap {
-            compatible = "zmk,behavior-hold-tap";
-            label = "POSITIONAL_HOLD_TAP";
-            #binding-cells = <2>;
-            flavor = "tap-preferred";
-            tapping-term-ms = <400>;
-            quick-tap-ms = <200>;
-            bindings = <&kp>, <&kp>;
-            hold-trigger-key-positions = <1>;    // <---[[the W key]]
+            mt: mod_tap {
+                flavor = "tap-preferred";
+                tapping-term-ms = <400>;
+                quick-tap-ms = <100>;
+            };
         };
 
 		default_layer {
