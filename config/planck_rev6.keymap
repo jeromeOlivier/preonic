@@ -2,19 +2,20 @@
 #include <dt-bindings/zmk/keys.h>
 
 / {
+    behaviors {
+        hm: homerow_mods {
+            compatible = "zmk,behavior-hold-tap";
+            label = "HOMEROW_MODS";
+            #binding-cells = <2>;
+            tapping-term-ms = <150>;
+            quick-tap-ms = <0>;
+            flavor = "tap-preferred";
+            bindings = <&kp>, <&kp>;
+        };
+    };
+
 	keymap {
 		compatible = "zmk,keymap";
-        behaviors {
-            hm: homerow_mods {
-                compatible = "zmk,behavior-hold-tap";
-                label = "HOMEROW_MODS";
-                #binding-cells = <2>;
-                tapping-term-ms = <150>;
-                quick-tap-ms = <0>;
-                flavor = "tap-preferred";
-                bindings = <&kp>, <&kp>;
-            };
-        };
 
 		default_layer {
 // -----------------------------------------------------------------------------------------
@@ -23,10 +24,10 @@
 // | SHIFT |  Z   |  X   |  C   |  V   |  B   |   N   |  M    |  ,   |  .   |   /   |  RET  |
 // | FN    | LGUI | LALT | LCTL | LOWR |     SPACE    |  RAIS | LARW | DARW | UARW  |  RARW |
 			bindings = <
-	&kp TAB   &kp Q    &kp W    &kp E     &kp R  &kp T  &kp Y     &kp U  &kp I          &kp O    &kp P    &kp DEL
-	&kp ESC   &kp A    &kp S    &kp D     &kp F  &kp G  &kp H     &kp J  &hm RSHIFT T     &hm RGUI H    &hm RCTRL O     &hm RALT S
-	&kp LSHFT &kp Z    &kp X    &kp C     &kp V  &kp B  &kp N     &kp M  &kp COMMA &kp DOT  &kp BSLH &kp RET
-	&trans    &kp LGUI &kp LALT &kp LCTRL &trans &trans &kp SPACE &trans &kp LEFT  &kp DOWN &kp UP   &kp RIGHT
+	&kp TAB   &kp Q    &kp W    &kp E     &kp R  &kp T  &kp Y     &kp U  &kp I          &kp O       &kp P       &kp DEL
+	&kp ESC   &kp A    &kp S    &kp D     &kp F  &kp G  &kp H     &kp J  &hm RSHIFT T   &hm RGUI H  &hm RCTRL O &hm RALT S
+	&kp LSHFT &kp Z    &kp X    &kp C     &kp V  &kp B  &kp N     &kp M  &kp COMMA      &kp DOT     &kp BSLH    &kp RET
+	&trans    &kp LGUI &kp LALT &kp LCTRL &trans &trans &kp SPACE &trans &kp LEFT       &kp DOWN    &kp UP      &kp RIGHT
 			>;
 		};
 	};
