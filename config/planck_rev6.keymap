@@ -4,12 +4,10 @@
 / {
 	keymap {
 		compatible = "zmk,keymap";
-        behaviors {
-            mt: mod_tap {
-                flavor = "tap-preferred";
-                tapping-term-ms = <400>;
-                quick-tap-ms = <100>;
-            };
+        mt {
+            flavor = "tap-preferred";
+            tapping-term-ms = <400>;
+            quick-tap-ms = <100>;
         };
 
 		default_layer {
