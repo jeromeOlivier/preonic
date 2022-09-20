@@ -13,22 +13,12 @@
         bindings = <&kp>, <&kp>;
         };
     };
+
     keymap {
         compatible = "zmk,keymap";
         layer0 {
             bindings = <
-                &kp Q   &kp B   &kp U   &kp F
-                &kp F20 &kp F20 &kp F20 &kp F20
-                &kp W   &kp M   &kp G   &kp J
-                &hm LEFT_CONTROL A  &hm LEFT_ALT I  &hm LEFT_GUI N  &hm LEFT_SHIFT E
-                &kp F20 &kp F20 &kp F20 &kp F20
-                &hm RIGHT_SHIFT T   &hm RIGHT_GUI H &hm RIGHT_ALT O &hm RIGHT_CONTROL S
-                &kp V   &kp P   &kp D   &kp R
-                &kp F20 &kp F20 &kp F20 &kp F20
-                &kp C   &kp L   &kp Y   &kp K
-                &kp F20 &kp F20     &tog 2  &mo 1
-                &kp F20 &kp F20 &kp F20 &kp F20
-                &lt 3 SPACE &tog 4  &kp F20 &kp F20
+                &kp Q &kp B &kp U &kp F &kp F20 &kp F20 &kp F20 &kp F20 &kp W &kp M &kp G &kp J &hm LEFT_CONTROL A &hm LEFT_ALT I &hm LEFT_GUI N &hm LEFT_SHIFT E &kp F20 &kp F20 &kp F20 &kp F20 RSFT_T(KC_T) RGUI_T(KC_H) RALT_T(KC_O) RCTL_T(KC_S) &kp V &kp P &kp D &kp R &kp F20 &kp F20 &kp F20 &kp F20 &kp C &kp L &kp Y &kp K &kp F20 &kp F20 &tog 2 &mo 1 &kp F20 &kp F20 &kp F20 &kp F20 &lt 3 SPACE &tog 4 &kp F20 &kp F20
             >;
         };
         layer1 {
