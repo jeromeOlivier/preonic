@@ -1,45 +1,37 @@
+/*
+* Copyright (c) 2020 The ZMK Contributors
+*
+* SPDX-License-Identifier: MIT
+*/
+
 #include <behaviors.dtsi>
 #include <dt-bindings/zmk/keys.h>
+#include <dt-bindings/zmk/bt.h>
+#include <dt-bindings/zmk/ext_power.h>
 
 / {
-    behaviors {
-        hm: homerow_mods {
-        compatible = "zmk,behavior-hold-tap";
-        label = "HOMEROW_MODS";
-        #binding-cells = <2>;
-        tapping-term-ms = <150>;
-        quick-tap-ms = <0>;
-        flavor = "tap-preferred";
-        bindings = <&kp>, <&kp>;
-        };
-    };
-
-    keymap {
-        compatible = "zmk,keymap";
-        layer0 {
-            bindings = <
-                &kp Q &kp B &kp U &kp F &kp F20 &kp F20 &kp F20 &kp F20 &kp W &kp M &kp G &kp J &hm LEFT_CONTROL A &hm LEFT_ALT I &hm LEFT_GUI N &hm LEFT_SHIFT E &kp F20 &kp F20 &kp F20 &kp F20 RSFT_T(KC_T) RGUI_T(KC_H) RALT_T(KC_O) RCTL_T(KC_S) &kp V &kp P &kp D &kp R &kp F20 &kp F20 &kp F20 &kp F20 &kp C &kp L &kp Y &kp K &kp F20 &kp F20 &tog 2 &mo 1 &kp F20 &kp F20 &kp F20 &kp F20 &lt 3 SPACE &tog 4 &kp F20 &kp F20
-            >;
-        };
-        layer1 {
-            bindings = <
-                &kp ESCAPE KC_RPRN KC_LPRN LGUI(KC_TAB) &kp F20 &kp F20 &kp F20 &kp F20 &kp GRAVE &kp MINUS &kp EQUAL &kp BACKSPACE &kp LEFT_SHIFT &kp LEFT_CONTROL &kp LEFT_ALT &kp LEFT_GUI &kp F20 &kp F20 &kp F20 &kp F20 &kp SEMICOLON &kp SINGLE_QUOTE &kp LEFT_BRACKET &kp RIGHT_BRACKET &kp F20 &kp F20 &kp F20 &kp F20 &kp F20 &kp F20 &kp F20 &kp F20 &kp COMMA &kp DOT &kp SLASH &kp BACKSLASH &kp F20 &kp F20 &kp F20 &trans &kp F20 &kp F20 &kp F20 &kp F20 &kp TAB &kp F20 &kp F20 &kp F20
-            >;
-        };
-        layer2 {
-            bindings = <
-                &kp F20 &kp F20 &kp F20 &kp F20 &kp F20 &kp F20 &kp F20 &kp F20 &kp F1 &kp F2 &kp F3 &kp F4 &kp LEFT_SHIFT &kp LEFT_CONTROL &kp LEFT_ALT &kp LEFT_GUI &kp F20 &kp F20 &kp F20 &kp F20 &kp F5 &kp F6 &kp F7 &kp F8 &kp F20 &kp F20 &kp F20 &kp F20 &kp F20 &kp F20 &kp F20 &kp F20 &kp F9 &kp F10 &kp F11 &kp F12 &kp F20 &kp F20 &trans &kp F20 &kp F20 &kp F20 &kp F20 &kp F20 &kp F20 &kp F20 &kp F20 &kp F20
-            >;
-        };
-        layer3 {
-            bindings = <
-                &kp F20 &kp N3 &kp N2 &kp N1 &kp F20 &kp F20 &kp F20 &kp F20 &kp CAPSLOCK LCTL(KC_K) &kp DELETE &kp BACKSPACE &kp KP_EQUAL &kp N6 &kp N5 &kp N4 &kp F20 &kp F20 &kp F20 &kp F20 &kp LEFT_SHIFT &kp LEFT_GUI &kp LEFT_ALT &kp LEFT_CONTROL &kp KP_DOT &kp N9 &kp N8 &kp N7 &kp F20 &kp F20 &kp F20 &kp F20 &kp KP_PLUS &kp KP_MINUS &kp KP_ASTERISK &kp KP_SLASH &kp F20 &kp F20 &kp N0 &kp ENTER &kp F20 &kp F20 &kp F20 &kp F20 &trans &kp F20 &kp F20 &kp F20
-            >;
-        };
-        layer4 {
-            bindings = <
-                &kp PAGE_UP KC_WH_U &kp UP KC_WH_D &kp F20 &kp F20 &kp F20 &kp F20 RGUI(KC_X) RGUI(KC_C) RGUI(KC_V) RGUI(KC_Z) &kp PAGE_DOWN &kp LEFT &kp DOWN &kp RIGHT &kp F20 &kp F20 &kp F20 &kp F20 &kp RIGHT_SHIFT &kp RIGHT_GUI &kp RIGHT_ALT &kp RIGHT_CONTROL &kp C_BRIGHTNESS_DEC &kp C_BRIGHTNESS_INC &kp C_VOLUME_DOWN &kp C_VOLUME_UP &kp F20 &kp F20 &kp F20 &kp F20 RGUI(KC_A) RGUI(KC_B) RGUI(KC_U) RGUI(KC_I) &kp F20 &kp F20 &kp F20 &kp F20 &kp F20 &kp F20 &kp F20 &kp F20 &kp F20 &trans &kp F20 &kp F20
-            >;
-        };
-    };
+keymap {
+compatible = "zmk,keymap";
+layer0 {
+bindings = <
+&kp Q &kp B &kp U &kp F &kp F20 &kp F20 &kp F20 &kp F20 &kp W &kp M &kp G &kp J &mt LEFT_CONTROL A &mt LEFT_ALT I &mt LEFT_GUI N &mt LEFT_SHIFT E &kp F20 &kp F20 &kp F20 &kp F20 RSFT_T(KC_T) RGUI_T(KC_H) RALT_T(KC_O) RCTL_T(KC_S) &kp V &kp P &kp D &kp R &kp F20 &kp F20 &kp F20 &kp F20 &kp C &kp L &kp Y &kp K &kp F20 &kp F20 &tog 2 &mo 1 &kp F20 &kp F20 &kp F20 &kp F20 &lt 3 SPACE &tog 4 &kp F20 &kp F20
+>;
+};layer1 {
+bindings = <
+&kp ESCAPE KC_RPRN KC_LPRN LGUI(KC_TAB) &kp F20 &kp F20 &kp F20 &kp F20 &kp GRAVE &kp MINUS &kp EQUAL &kp BACKSPACE &kp LEFT_SHIFT &kp LEFT_CONTROL &kp LEFT_ALT &kp LEFT_GUI &kp F20 &kp F20 &kp F20 &kp F20 &kp SEMICOLON &kp SINGLE_QUOTE &kp LEFT_BRACKET &kp RIGHT_BRACKET &kp F20 &kp F20 &kp F20 &kp F20 &kp F20 &kp F20 &kp F20 &kp F20 &kp COMMA &kp DOT &kp SLASH &kp BACKSLASH &kp F20 &kp F20 &kp F20 &trans &kp F20 &kp F20 &kp F20 &kp F20 &kp TAB &kp F20 &kp F20 &kp F20
+>;
+};layer2 {
+bindings = <
+&kp F20 &kp F20 &kp F20 &kp F20 &kp F20 &kp F20 &kp F20 &kp F20 &kp F1 &kp F2 &kp F3 &kp F4 &kp LEFT_SHIFT &kp LEFT_CONTROL &kp LEFT_ALT &kp LEFT_GUI &kp F20 &kp F20 &kp F20 &kp F20 &kp F5 &kp F6 &kp F7 &kp F8 &kp F20 &kp F20 &kp F20 &kp F20 &kp F20 &kp F20 &kp F20 &kp F20 &kp F9 &kp F10 &kp F11 &kp F12 &kp F20 &kp F20 &trans &kp F20 &kp F20 &kp F20 &kp F20 &kp F20 &kp F20 &kp F20 &kp F20 &kp F20
+>;
+};layer3 {
+bindings = <
+&kp F20 &kp N3 &kp N2 &kp N1 &kp F20 &kp F20 &kp F20 &kp F20 &kp CAPSLOCK LCTL(KC_K) &kp DELETE &kp BACKSPACE &kp KP_EQUAL &kp N6 &kp N5 &kp N4 &kp F20 &kp F20 &kp F20 &kp F20 &kp LEFT_SHIFT &kp LEFT_GUI &kp LEFT_ALT &kp LEFT_CONTROL &kp KP_DOT &kp N9 &kp N8 &kp N7 &kp F20 &kp F20 &kp F20 &kp F20 &kp KP_PLUS &kp KP_MINUS &kp KP_ASTERISK &kp KP_SLASH &kp F20 &kp F20 &kp N0 &kp ENTER &kp F20 &kp F20 &kp F20 &kp F20 &trans &kp F20 &kp F20 &kp F20
+>;
+};layer4 {
+bindings = <
+&kp PAGE_UP KC_WH_U &kp UP KC_WH_D &kp F20 &kp F20 &kp F20 &kp F20 RGUI(KC_X) RGUI(KC_C) RGUI(KC_V) RGUI(KC_Z) &kp PAGE_DOWN &kp LEFT &kp DOWN &kp RIGHT &kp F20 &kp F20 &kp F20 &kp F20 &kp RIGHT_SHIFT &kp RIGHT_GUI &kp RIGHT_ALT &kp RIGHT_CONTROL &kp C_BRIGHTNESS_DEC &kp C_BRIGHTNESS_INC &kp C_VOLUME_DOWN &kp C_VOLUME_UP &kp F20 &kp F20 &kp F20 &kp F20 RGUI(KC_A) RGUI(KC_B) RGUI(KC_U) RGUI(KC_I) &kp F20 &kp F20 &kp F20 &kp F20 &kp F20 &kp F20 &kp F20 &kp F20 &kp F20 &trans &kp F20 &kp F20
+>;
+};
+};
 };
