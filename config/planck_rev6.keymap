@@ -33,8 +33,12 @@
     };
     keymap {
         compatible = "zmk,keymap";
-        alfa { bindings = < &kp Q &kp B &kp U &kp F &none &none &none &none &td1 &kp M &kp G &td0 &hm LCTRL A &hm LALT I &hm LGUI N &hm LSHIFT E &none &none &none &none &hm RSHIFT T &hm RGUI H &hm RCTRL O &hm RALT S &kp V &kp P &kp D &kp R &none &none &none &none &kp C &kp L &kp Y &kp K &none &none &tog func &mo punc &none &none &none &none &lt numb SPACE &tog navi &none &none >; };
-        punc { bindings = < &kp ESC &kp RPAR &kp LPAR &kp LG(TAB) &none &none &none &none &kp GRAVE &kp MINUS &kp EQUAL &kp BSPC &kp LCTRL &kp LALT &kp LGUI &kp LSHIFT &none &none &none &none &kp SEMI &kp SQT &kp LBKT &kp LBRC &none &none &none &none &none &none &none &none &kp COMMA &kp DOT &kp FSLH &kp BSLH &none &none &none &trans &none &none &none &none &kp TAB &none &none &none >; };
+        alfa { bindings = < &kp Q &kp B &kp U &kp F &none &none &none &none &td1 &kp M &kp G &td0 &hm LCTRL A &hm LALT I &hm LGUI N &hm LSHIFT E &none &none &none &none &hm RSHIFT T &hm RGUI H &hm RCTRL O &hm RALT S &kp V &kp P &kp D &kp R &none &none &none &none &kp C &kp L &kp Y &kp K &none &none &mo func &mo punc &none &none &none &none &lt numb SPACE &mo navi &none &none >; };
+        punc { bindings = <
+            &kp ESC    &kp RPAR  &kp LPAR  &kp LG(TAB)    &none &none &none &none   &kp SEMI    &kp SQT     &kp EQUAL   &kp BSPC
+            &kp LCTRL  &kp LALT  &kp LGUI  &kp LSHIFT     &none &none &none &none   &kp COMMA   &kp DOT     &kp FSLH    &kp BSLH
+            &none      &none     &none     &none          &none &none &none &none   &kp LBKT    &kp RBKT    &kp GRAVE   &kp MINUS
+            &none &none &none &trans &none &none &none &none &kp TAB &none &none &none >; };
         func { bindings = < &none &none &none &none &none &none &none &none &kp F1 &kp F2 &kp F3 &kp F4 &kp LCTRL &kp LALT &kp LGUI &kp LSHIFT &none &none &none &none &kp F5 &kp F6 &kp F7 &kp F8 &none &none &none &none &none &none &none &none &kp F9 &kp F10 &kp F11 &kp F12 &none &none &trans &none &none &none &none &none &none &none &none &none >; };
         numb { bindings = < &none &kp N1 &kp N2 &kp N3 &none &none &none &none &kp CAPS &kp LC(K) &kp DEL &kp BSPC &kp KP_EQUAL &kp N4 &kp N5 &kp N6 &none &none &none &none &kp LSHIFT &kp LGUI &kp LALT &kp LCTRL &kp KP_DOT &kp N7 &kp N8 &kp N9 &none &none &none &none &kp KP_PLUS &kp KP_MINUS &kp KP_ASTERISK &kp KP_SLASH &none &none &kp N0 &kp RET &none &none &none &none &trans &none &none &none>; };
         navi { bindings = < &kp PG_UP &none &kp UP &none &none &none &none &none &kp RG(X) &kp RG(C) &kp RG(V) &kp RG(Z) &kp PG_DN &kp LEFT &kp DOWN &kp RIGHT &none &none &none &none &kp RSHIFT &kp RGUI &kp RALT &kp RCTRL &kp C_BRI_DN &kp C_BRI_UP &kp C_VOL_DN &kp C_VOL_UP &none &none &none &none &kp RG(A) &kp RG(B) &kp RG(U) &kp RG(I) &none &none &none &none &none &none &none &none &none &trans &none &none >; };
