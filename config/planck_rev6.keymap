@@ -23,7 +23,7 @@
             &kp Q          &kp B          &kp U           &kp F          &kp SEMI          &none &none    &kp SQT    &kp W           &kp M         &kp G            &kp Z
             &hm LCTRL A    &hm LALT I     &hm LGUI N      &hm LSHIFT E   &kp COMMA         &none &none    &kp DOT    &hm RSHIFT T    &hm RGUI H    &hm RCTRL O      &hm RALT S
             &kp V          &kp P          &kp D           &kp R          &kp J             &none &none    &kp K      &kp C           &kp L         &kp Y            &kp X
-            &none          &none          &mo FUNC        &lt RET PUNC   &none             &none &none    &none      &lt SPACE NUMB  &mo NAVI      &none            &none
+            &none          &none          &mo FUNC        &lt PUNC RET   &none             &none &none    &none      &lt NUMB SPACE  &mo NAVI      &none            &none
             >;
         };
         PUNC { bindings = <
