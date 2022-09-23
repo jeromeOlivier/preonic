@@ -30,7 +30,7 @@
             &kp ESC        &kp RPAR       &kp LPAR        &kp LG(TAB)    &kp GRAVE         &none &none    &kp MINUS  &kp EQUAL       &none         &kp DEL          &kp BSPC
             &kp LCTRL      &kp LALT       &kp LGUI        &kp LSHIFT     &kp LBKT          &none &none    &kp RBKT   &kp FSLH        &kp BSLH      &none            &none
             &none          &none          &none           &none          &kp LPAR          &none &none    &kp RPAR   &none           &none         &none            &none
-            &none          &none          &none           &trans         &none             &none &none    &none      &kp RET         &none         &none            &none
+            &none          &none          &none           &trans         &none             &none &none    &none      &kp TAB         &none         &none            &none
             >;
         };
         FUNC { bindings = <
