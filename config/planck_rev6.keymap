@@ -20,7 +20,7 @@
     keymap {
         compatible = "zmk,keymap";
         ALFA { bindings = <
-            &kp Q          &kp B          &kp U           &kp F           &kp SEMI     &none &none    &kp SQT           &kp W           &kp M         &kp G            &kp J
+            &kp Q          &kp B          &kp U           &kp F           &kp GRAVE    &none &none    &kp SQT           &kp W           &kp M         &kp G            &kp J
             &hm LCTRL A    &hm LALT I     &hm LGUI N      &hm LSHIFT E    &kp COMMA    &none &none    &kp DOT           &hm RSHIFT T    &hm RGUI H    &hm RCTRL O      &hm RALT S
             &kp V          &kp P          &kp D           &kp R           &kp Z        &none &none    &kp X             &kp C           &kp L         &kp Y            &kp K
             &none          &none          &mo NUMB        &lt PUNC RET    &kp BSLH     &none &none    &kp FSLH          &lt FUNC SPACE  &mo NAVI      &none            &none
