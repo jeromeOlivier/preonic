@@ -58,8 +58,8 @@
         SMBL { bindings = <
             &td2            &kp EXCL        &kp AT       &kp HASH     &kp DOLLAR       &kp PERCENT      &kp CARET        &kp AMPS         &kp STAR     &kp MINUS      &kp EQUAL        &bspc_del
             &kp TAB         &kp LALT        &kp LCTRL    &kp LGUI     &kp LSHIFT       &none            &kp LPAR         &kp LBKT         &kp RBKT     &kp SEMI       &kp SQT          &kp RET
-            &td0            &none           &none        &none        &none            &none            &kp RPAR         &kp BSLH         &kp COMMA    &kp DOT        &kp FSLH         &td1
-            &kp LC(LEFT)    &kp LC(RIGHT)   &kp LC(UP)   &none        &trans           &trans           &kp RET          &kp RET        &none        &kp C_BRI_DN   &kp C_BRI_UP     &kp C_PWR
+            &td0            &none           &none        &none        &none            &none            &kp RPAR         &kp BSLH         &kp LT       &kp GT         &kp FSLH         &td1
+            &kp LC(LEFT)    &kp LC(RIGHT)   &kp LC(UP)   &none        &trans           &trans           &kp RET          &kp RET          &none        &kp C_BRI_DN   &kp C_BRI_UP     &kp C_PWR
             >;
         };
         FUNC { bindings = <
