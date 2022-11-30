@@ -16,9 +16,9 @@
             flavor = "tap-preferred";
             bindings = <&kp>, <&kp >;
         };
-        td0: tap_dance {
-            compatible = "zmk,tap-dance";
-            label = "TAP_DANCE";
+        td0: tap_dance_0 {
+            compatible = "zmk,behavior-tap-dance";
+            label = "TAP_DANCE_0";
             #binding-cells = <2>;
             tapping-term-ms = <200>;
             quick-tap-ms = <125>;
